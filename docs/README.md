@@ -2,7 +2,7 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
 
 # Index
 - [Introduction](https://github.com/Lladruc37/ParticleSystem/tree/main/docs#introduction)
-- [Market study](./#Market-study)
+- [Market study](./#market-study)
 - My approach
 - TODO's and Solutions
 - Possible improvements
