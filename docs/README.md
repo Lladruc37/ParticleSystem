@@ -4,7 +4,7 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
 - [Introduction](#introduction)
 - [Market study](#market-study)
 - [My approach](#my-approach)
-- [TODO's and Solutions](#todo's-and-solutions)
+- [TODO's and Solutions](#todos-and-solutions)
 - [Possible improvements](#possible-improvements)
 - [Documentation](#documentation)
 
