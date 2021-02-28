@@ -8,6 +8,28 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
 - Possible improvements
 - Documentation
 
+sadgfds
+gdf
+
+fd
+h
+fgd
+hfdg
+hs
+
+sd
+gds
+gs
+dfg
+dg
+sdf
+g
+sdg
+sd
+gsd
+gsd
+d
+
 # Introduction
 Here goes the introduction (what is everything) and explanation of the problem
 
