@@ -1,12 +1,12 @@
 This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37) for the Project II subject in the Bachelor's degree in Video Game Design and Development, under the supervision of [Ramon Santamaria Pena](https://github.com/raysan5)
 
 # Index
-- [Introduction](https://github.com/Lladruc37/ParticleSystem/tree/main/docs#introduction)
+- [Introduction](#introduction)
 - [Market study](#market-study)
-- My approach
-- TODO's and Solutions
-- Possible improvements
-- Documentation
+- [My approach](#my-approach)
+- [TODO's and Solutions](#todo's-and-solutions)
+- [Possible improvements](#possible-improvements)
+- [Documentation](#documentation)
 
 sad
 
