@@ -69,3 +69,24 @@ what could be improved
 Links used
 
 https://www.youtube.com/watch?v=6Z5FI5180oo
+https://github.com/scarsty/SDL2-particles
+https://www.youtube.com/watch?v=eyo9jRsJBwY
+https://discourse.libsdl.org/t/2d-lighting-particle-effects/20480
+https://www.pascalgamedevelopment.com/showthread.php?5863-SDL-amp-2d-particles
+https://www.reddit.com/r/learnprogramming/comments/8up5q9/c_sdl2_particle_system_tutorials/
+https://gamedev.stackexchange.com/questions/33670/what-features-do-basic-particle-engines-have
+http://buildnewgames.com/particle-systems/
+https://www.bfilipek.com/2014/04/flexible-particle-system-start.html
+https://subscription.packtpub.com/book/game_development/9781785882722/9/ch09lvl1sec85/creating-a-particle-system
+https://stackoverflow.com/questions/11910181/how-to-implement-direction-in-a-2d-particle-system
+https://gamedev.net/forums/topic/380009-where-can-i-find-a-2d-particle-system-tutorial/380009/
+http://wiki.libsdl.org/CategoryRender?highlight=%28particle%29
+https://gamedev.net/forums/topic/627017-2d-particle-effects-39where-do-i-begin39/4954379/
+https://www.youtube.com/watch?v=f2zZfj8eq_Q&feature=emb_title
+http://gameprogrammingpatterns.com/object-pool.html
+http://gameprogrammingpatterns.com
+https://gamedevelopment.tutsplus.com/tutorials/adding-turbulence-to-a-particle-system--gamedev-13332
+https://github.com/nintervik/2D-Particle-System
+https://github.com/nintervik/2D-Particle-System/tree/master/docs
+https://nintervik.github.io/2D-Particle-System/
+https://www.gamasutra.com/blogs/DavidFinseth/20180216/314707/Creating_2D_Particle_Effects_in_Unity3D.php
