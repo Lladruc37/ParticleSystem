@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\Log.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\External\PugiXml\src\pugixml.cpp">
+      <Filter>External\PugiXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Input.cpp">
+      <Filter>Base\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Render.cpp">
+      <Filter>Base\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Textures.cpp">
+      <Filter>Base\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Window.cpp">
+      <Filter>Base\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PerfTimer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ParticleSystem.cpp">
+      <Filter>Particle Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene.cpp">
+      <Filter>Base\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\App.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Main.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Defs.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DynArray.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\List.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Log.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Point.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SString.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\External\PugiXml\src\pugiconfig.hpp">
+      <Filter>External\PugiXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\External\PugiXml\src\pugixml.hpp">
+      <Filter>External\PugiXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Queue.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Input.h">
+      <Filter>Base\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Module.h">
+      <Filter>Base\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Render.h">
+      <Filter>Base\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Textures.h">
+      <Filter>Base\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Window.h">
+      <Filter>Base\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Timer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PerfTimer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ParticleSystem.h">
+      <Filter>Particle Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene.h">
+      <Filter>Base\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\App.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="External">
+      <UniqueIdentifier>{83a966c7-b4bb-4eff-9c2c-3ff3c7b55a60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{2cad778a-d356-48b0-9fee-587f1bbb187e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\PugiXml">
+      <UniqueIdentifier>{2855ff7f-53a1-413d-a75b-18b4ade921dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{2f5ff44d-c5e7-4a48-a664-d6838b359e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle Engine">
+      <UniqueIdentifier>{9e9bb231-3abd-4747-aca7-e2ee1f93c209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Modules">
+      <UniqueIdentifier>{aac28dca-c359-48bd-9a2b-62effca39bcb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Output\config.xml">
+      <Filter>Base</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
