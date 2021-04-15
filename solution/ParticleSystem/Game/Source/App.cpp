@@ -45,7 +45,7 @@ App::~App()
 	// Release modules
 	ListItem<Module*>* item = modules.end;
 
-	while(item != NULL)
+	while (item != NULL)
 	{
 		RELEASE(item->data);
 		item = item->prev;

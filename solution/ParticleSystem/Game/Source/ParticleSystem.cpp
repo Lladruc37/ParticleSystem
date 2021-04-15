@@ -1,8 +1,8 @@
 #include "App.h"
 #include "ParticleSystem.h"
 
-//#include "Defs.h"
-//#include "Log.h"
+#include "Defs.h"
+#include "Log.h"
 
 ParticleSystem::ParticleSystem()
 {
@@ -10,12 +10,11 @@ ParticleSystem::ParticleSystem()
 }
 
 ParticleSystem::~ParticleSystem()
-{
-
-}
+{}
 
 bool ParticleSystem::Awake()
 {
+	LOG("Loading Particle System");
 	return true;
 }
 

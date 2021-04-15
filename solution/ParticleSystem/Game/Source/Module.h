@@ -13,10 +13,6 @@ public:
 	Module() : active(false)
 	{}
 
-	// Destructor
-	virtual ~Module()
-	{}
-
 	// Called when program is executed
 	virtual void Init()
 	{

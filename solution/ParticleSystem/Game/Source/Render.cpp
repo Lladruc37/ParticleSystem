@@ -76,6 +76,10 @@ bool Render::Update(float dt)
 	{
 		debug = !debug;
 	}
+	if (app->input->GetKey(SDL_SCANCODE_ESCAPE) == KEY_DOWN)
+	{
+		return false;
+	}
 	return true;
 }
 
@@ -89,7 +93,6 @@ bool Render::PostUpdate()
 bool Render::CleanUp()
 {
 	LOG("Destroying SDL render");
-
 	SDL_DestroyRenderer(renderer);
 
 	return true;
@@ -245,4 +248,63 @@ bool Render::DrawCircle(int x, int y, int radius, Uint8 r, Uint8 g, Uint8 b, Uin
 	}
 
 	return true;
+}
+
+bool Render::DrawParticle(SDL_Texture* texture, int x, int y, const SDL_Rect* section, const SDL_Rect* rectSize, SDL_Color color, SDL_BlendMode blendMode, float speed, double angle, int pivotX, int pivotY) const
+{
+	bool ret = true;
+	uint scale = app->win->GetScale();
+
+	SDL_Rect rect;
+	rect.x = (int)(camera.x * speed) + x * scale;
+	rect.y = (int)(camera.y * speed) + y * scale;
+
+	if (rectSize != NULL)
+	{
+		rect.w = rectSize->w;
+		rect.h = rectSize->h;
+	}
+	else if (section != NULL)
+	{
+		rect.w = section->w;
+		rect.h = section->h;
+	}
+	else
+	{
+		SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
+	}
+
+	int px = rect.w / 2;
+	int py = rect.h / 2;
+
+	rect.w *= scale;
+	rect.h *= scale;
+
+	SDL_Point* p = NULL;
+	SDL_Point pivot;
+	pivot.x = px;
+	pivot.y = py;
+	p = &pivot;
+
+	if (SDL_SetTextureColorMod(texture, color.r, color.g, color.b) != 0)
+	{
+		LOG("Cannot set texture color mode. SDL_SetTextureColorMod error: %s", SDL_GetError());
+	}
+	if (SDL_SetTextureAlphaMod(texture, color.a) != 0)
+	{
+		LOG("Cannot set texture alpha mode. SDL_SetTextureAlphaMod error: %s", SDL_GetError());
+	}
+	if (SDL_SetTextureBlendMode(texture, blendMode) != 0)
+	{
+		LOG("Cannot set texture blend mode. SDL_SetTextureBlendMode error: %s", SDL_GetError());
+	}
+
+
+	if (SDL_RenderCopyEx(renderer, texture, section, &rect, angle, NULL, SDL_FLIP_NONE) != 0)
+	{
+		LOG("Cannot blit to screen. SDL_RenderCopy error: %s", SDL_GetError());
+		ret = false;
+	}
+
+	return ret;
 }

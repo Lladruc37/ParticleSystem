@@ -2,7 +2,6 @@
 #define __SCENE_H__
 
 #include "Module.h"
-#include "Scene.h"
 
 class Scene : public Module
 {
@@ -32,7 +31,7 @@ public:
 	bool CleanUp();
 
 public:
-
+	SDL_Texture* particlesAtlas;
 };
 
 #endif // __SCENE_H__
