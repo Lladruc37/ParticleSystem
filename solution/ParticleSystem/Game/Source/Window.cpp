@@ -14,12 +14,10 @@ Window::Window() : Module()
 	name.Create("window");
 }
 
-// Destructor
 Window::~Window()
 {
 }
 
-// Called before render is available
 bool Window::Awake(pugi::xml_node& config)
 {
 	LOG("Init SDL window & surface");
@@ -33,7 +31,6 @@ bool Window::Awake(pugi::xml_node& config)
 	else
 	{
 		// Create window
-		// L01: DONE 6: Load all required configurations from config.xml
 		Uint32 flags = SDL_WINDOW_SHOWN;
 		bool fullscreen = config.child("fullscreen").attribute("value").as_bool(false);
 		bool borderless = config.child("borderless").attribute("value").as_bool(false);
@@ -66,7 +63,6 @@ bool Window::Awake(pugi::xml_node& config)
 	return ret;
 }
 
-// Called before quitting
 bool Window::CleanUp()
 {
 	LOG("Destroying SDL window and quitting all SDL systems");
@@ -82,10 +78,8 @@ bool Window::CleanUp()
 	return true;
 }
 
-// Set new window title
 void Window::SetTitle(const char* new_title)
 {
-	//title.create(new_title);
 	SDL_SetWindowTitle(window, new_title);
 }
 

@@ -3,10 +3,12 @@
 
 #include "Module.h"
 
+class Emitter;
+
 class Scene : public Module
 {
 public:
-
+	// Constructor
 	Scene();
 
 	// Destructor
@@ -24,7 +26,7 @@ public:
 	// Called each loop iteration
 	bool Update(float dt);
 
-	// Called before all Updates
+	// Called after all Updates
 	bool PostUpdate();
 
 	// Called before quitting
@@ -32,6 +34,17 @@ public:
 
 public:
 	SDL_Texture* particlesAtlas;
-};
+	SDL_Texture* particlesAtlasClean;
 
+private:
+	List<Emitter*> fires;
+	List<Emitter*> smokes;
+	List<Emitter*> novas;
+	List<Emitter*> slashes;
+	List<Emitter*> bubbles;
+	List<Emitter*> heals;
+	List<Emitter*> blesses;
+
+	bool movingFire;
+};
 #endif // __SCENE_H__

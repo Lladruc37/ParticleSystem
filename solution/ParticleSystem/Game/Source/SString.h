@@ -12,12 +12,10 @@
 class SString
 {
 private:
-
 	char* str;
 	unsigned int size;
 
 public:
-
 	// Constructors
 	SString()
 	{
@@ -374,13 +372,10 @@ public:
 	}
 
 private:
-
 	void Alloc(unsigned int requiered_memory)
 	{
 		size = requiered_memory;
 		str = new char[size];
 	}
-
 };
-
 #endif // __SString_H__

@@ -37,6 +37,12 @@
     <ClCompile Include="Source\Main.cpp">
       <Filter>Base</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Emitter.cpp">
+      <Filter>Particle Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Particle.cpp">
+      <Filter>Particle Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Defs.h">
@@ -95,6 +101,12 @@
     </ClInclude>
     <ClInclude Include="Source\App.h">
       <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Emitter.h">
+      <Filter>Particle Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Particle.h">
+      <Filter>Particle Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

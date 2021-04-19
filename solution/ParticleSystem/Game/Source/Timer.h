@@ -17,5 +17,4 @@ public:
 private:
 	uint32 startTime;
 };
-
 #endif //__TIMER_H__

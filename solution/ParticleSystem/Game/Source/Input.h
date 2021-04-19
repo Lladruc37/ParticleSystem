@@ -31,7 +31,7 @@ class Input : public Module
 {
 
 public:
-
+	// Constructor
 	Input();
 
 	// Destructor
@@ -43,18 +43,19 @@ public:
 	// Called before the first frame
 	bool Start();
 
-	// Called each loop iteration
+	// Called before all Updates
 	bool PreUpdate();
 
 	// Called before quitting
 	bool CleanUp();
 
-	// Check key states (includes mouse and joy buttons)
+	// Check key state
 	KeyState GetKey(int id) const
 	{
 		return keyboard[id];
 	}
 
+	// Check mouse button state
 	KeyState GetMouseButtonDown(int id) const
 	{
 		return mouseButtons[id - 1];
@@ -76,5 +77,4 @@ public:
 	int mouseX;
 	int mouseY;
 };
-
 #endif // __INPUT_H__

@@ -20,7 +20,6 @@ class Scene;
 class App
 {
 public:
-
 	// Constructor
 	App(int argc, char* args[]);
 
@@ -48,18 +47,7 @@ public:
 	const char* GetTitle() const;
 	const char* GetOrganization() const;
 
-	// Requests Savefile
-	bool CheckSaveFile();
-
-	// Requests Load/Save
-	void LoadRequest();
-	void SaveRequest();
-
-	// Requests Cap
-	void CapRequest();
-
 private:
-
 	// Load config file
 	pugi::xml_node LoadConfig(pugi::xml_document&) const;
 
@@ -79,7 +67,6 @@ private:
 	bool PostUpdate();
 
 public:
-
 	// Modules
 	Window* win;
 	Input* input;
@@ -91,7 +78,6 @@ public:
 	bool exitRequest;
 
 private:
-
 	int argc;
 	char** args;
 	SString title;

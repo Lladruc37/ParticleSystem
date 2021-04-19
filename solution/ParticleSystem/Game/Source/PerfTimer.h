@@ -18,5 +18,4 @@ private:
 	uint64 startTick;
 	static uint64 frequency;
 };
-
 #endif // __PERFTIMER_H__

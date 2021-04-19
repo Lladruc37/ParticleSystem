@@ -13,17 +13,13 @@ struct QueueItem
 	{}
 };
 
-
 template<class tdata>
 class Queue
 {
-
 public:
-
 	QueueItem<tdata>* start;
 
 public:
-
 	inline Queue() : start(NULL)
 	{}
 

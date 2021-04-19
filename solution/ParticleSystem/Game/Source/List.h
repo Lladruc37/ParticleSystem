@@ -7,10 +7,6 @@
 template<class tdata>
 struct ListItem
 {
-	tdata data;
-	ListItem<tdata>* next;
-	ListItem<tdata>* prev;
-
 	// Constructor
 	inline ListItem(const tdata& newData)
 	{
@@ -21,6 +17,10 @@ struct ListItem
 	// Destructor
 	~ListItem()
 	{}
+
+	tdata data;
+	ListItem<tdata>* next;
+	ListItem<tdata>* prev;
 };
 
 // Manages a double linked list

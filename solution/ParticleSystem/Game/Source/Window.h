@@ -9,7 +9,7 @@ struct SDL_Surface;
 class Window : public Module
 {
 public:
-
+	// Constructor
 	Window();
 
 	// Destructor
@@ -21,13 +21,13 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	// Changae title
+	// Changes the title
 	void SetTitle(const char* title);
 
-	// Retrive window size
+	// Retrives the window size
 	void GetWindowSize(uint& width, uint& height) const;
 
-	// Retrieve window scale
+	// Retrieves the window scale
 	uint GetScale() const;
 
 public:
@@ -43,5 +43,4 @@ private:
 	uint height;
 	uint scale;
 };
-
 #endif // __WINDOW_H__

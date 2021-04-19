@@ -9,13 +9,11 @@ template<class VALUE>
 class DynArray
 {
 private:
-
 	VALUE* data;
 	unsigned int memCapacity;
 	unsigned int numElements;
 
 public:
-
 	// Constructors
 	DynArray() : memCapacity(0), numElements(0), data(NULL)
 	{
@@ -238,7 +236,6 @@ public:
 	}
 
 private:
-
 	// Private Utils
 	void Alloc(unsigned int mem)
 	{
@@ -257,5 +254,4 @@ private:
 		}
 	}
 };
-
 #endif // __DYNARRAY_H__
