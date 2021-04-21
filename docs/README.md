@@ -151,7 +151,7 @@ Equally to the particle system module I will not go very much in depth as to the
 - Spawn particles
 - Despawn particles
 - Update all particles
-- Draw all particles
+- PostUpdate all particles (draw)
 - Self-despawn
 - Generate a random number (used for the particle spawning)
 - Move the emitter
