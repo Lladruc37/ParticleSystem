@@ -43,9 +43,7 @@ Another important thing that I want to remark is that the way I’m going to exp
 
 By the end of the web, if you have been following with the exercises you should get something like this and much more:
 
-![End Result](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
-![](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/fire.gif)
-![](http://i.imgur.com/OUkLi.gif)
+![End Result](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/fire.gif)
 
 Let's see what's out there in the internet.
 
@@ -62,7 +60,7 @@ Here you have some examples of different sprite sheets:
 
 Even though this particle system is made considering a 2D game, here you have a 3D example:
 
-![3D Explosion](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/3d_explosion.gif)
+![3D Explosion](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/3d_explosion.gif)
 
 Let's see what composes a particle system.
 
@@ -307,7 +305,7 @@ if (movingFire)
 }
 ```
 
-![Moving Fire](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/moving.gif)
+![Moving Fire](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/moving.gif)
 
 ## Special Function: Vortex
 It's actually very simple, just some math involved and the results are great!
@@ -338,8 +336,8 @@ void Particle::CalculateParticlePos(float dt)
 }
 ```
 
-![Vortex1](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/vortex_1.gif)
-![Vortex2](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/vortex_2.gif)
+![Vortex1](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/vortex_1.gif)
+![Vortex2](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/vortex_2.gif)
 
 I have also a Set/Get functions but there is nothing really to explain about them so I will just move on to the results.
 
@@ -350,39 +348,39 @@ The results I got after some time making the particles are these:
 
 - Fire
 
-![Fire](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
+![Fire](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/fire.gif)
 
 - Smoke
 
-![Smoke](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/smoke.gif)
+![Smoke](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/smoke.gif)
 
 - Nova
 
-![Nova](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/nova.gif)
+![Nova](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/nova.gif)
 
 - Slash
 
-![Slash](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/slash.gif)
+![Slash](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/slash.gif)
 
 - Bubbles
 
-![Bubbles](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/bubbles.gif)
+![Bubbles](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/bubbles.gif)
 
 - Heal
 
-![Heal](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/heal.gif)
+![Heal](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/heal.gif)
 
 - Bless
 
-![Bless](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/bless.gif)
+![Bless](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/bless.gif)
 
 - Stop Vortex
 
-![Stop Vortex](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/stop_vortex.gif)
+![Stop Vortex](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/stop_vortex.gif)
 
 - Debug
 
-![Debug](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/debug.gif)
+![Debug](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/debug.gif)
 
 # TODOs and Solutions
 ## TODO 1: Set up the emitter
