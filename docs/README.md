@@ -12,7 +12,7 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
   - [Particle System Module](#particle-system-module)
   - [Emitter Class](#emitter-class)
   - [Particle Class](#particle-class)
-  - [Particle Parameters](#particle-parameters)
+  - [EmitterData](#emitterdata)
   - [Special Function: Moving fires](#special-function-moving-fires)
   - [Special Function: Vortex](#special-function-vortex)
   - [Results](#results)
@@ -244,7 +244,7 @@ bool Render::DrawParticle(SDL_Texture* texture, int x, int y, const SDL_Rect* se
 
 That's pretty much it for the basics. My system will have many more properties but for now let's keep it simple.
 
-## Particle Parameters
+## EmitterData
 I have a lot of parameters in my code (more especifically in the load emitter data function mentioned previously), this table will be used to explain all these in an orderly manner.
 
 | Parameter                         | Description                                                                                                           |
