@@ -16,7 +16,7 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
   - [Special Function: Moving fires](#special-function-moving-fires)
   - [Special Function: Vortex](#special-function-vortex)
   - [Results](#results)
-- [TODO's and Solutions](#todos-and-solutions)
+- [TODOs and Solutions](#todos-and-solutions)
   - [TODO 1: Set up the emitter](#todo-1-set-up-the-emitter)
   - [TODO 2: Particle constructor](#todo-2-particle-constructor)
   - [TODO 3.1: Updating alive particles](#todo-31-updating-alive-particles)
@@ -382,7 +382,7 @@ The results I got after some time making the particles are these:
 
 ![Debug](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/debug.gif)
 
-# TODO's and Solutions
+# TODOs and Solutions
 ## TODO 1: Set up the emitter
 You need to store the given variables by the particle system to a EmitterData variable.
 You will also have to calculate the maximum particles that are able to spawn each frame. I would use both the `emitNumber` and the `emitNumMult` to do that.
