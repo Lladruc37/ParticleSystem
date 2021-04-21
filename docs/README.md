@@ -52,11 +52,11 @@ It's quite common to work with sprites and sprite sheets, which for those unfami
 
 Here you have some examples of different sprite sheets:
 
-![Mega Man](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/mega_man.jpg)
+![Mega Man](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/mega_man.jpg)
 
-![Samus](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/samus.png)
+![Samus](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/samus.png)
 
-![Explosion](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/explosion.png)
+![Explosion](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/explosion.png)
 
 Even though this particle system is made considering a 2D game, here you have a 3D example:
 
@@ -92,7 +92,7 @@ As said before particles inherit its properties from the emitter they came from.
 
 This texture can be anything we want that fits our purpose. It’s almost always a balck and white texture that will be colored when rendering. A good example is this set of particle textures I gathered:
 
-![Particle Atlas](https://github.com/Lladruc37/ParticleSystem/blob/main/solution/Output/Assets/Textures/ParticlesAtlas.png)
+![Particle Atlas](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/solution/Output/Assets/Textures/ParticlesAtlas.png)
 
 Particle properties along with the emitter can be anything you like. As an example, the Unity engine has a big spectrum when it comes to emitters and particle properties, which of course you can change anything you want thus allowing you to generate almost any type of particle you can think of.
 
@@ -160,7 +160,7 @@ Equally to the particle system module I will not go very much in depth as to the
 ## Particle Class
 This class is actually pretty simple if it is kept basic. It is given a lot of data that will define and diferenciate the various types of particles. To go along with this, there are a few functions to draw, update and prepare for deletion of the particle. A particle in its essence is a moving point in space with a texture. Here you have a diagram of the most basic particle:
 
-![Basic Particle](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/particle.png)
+![Basic Particle](https://raw.githubusercontent.com/Lladruc37/ParticleSystem/main/docs/images/particle.png)
 
 A particle will be a class with a position, a vector velocity and a texture (represented by a rectangle indicating the position and size inside the atlas). In this case I will add a lot more data but that’s something optional depending of what you want to do.
 This particle will have a constructor for setting everything up, an update method to move them and a draw one to render them on screen and that’s it.
