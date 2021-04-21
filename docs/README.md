@@ -96,10 +96,6 @@ Here you have a video I found very interesting of how particles are done in Leag
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OczfR1UhMPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/{watch?v=OczfR1UhMPg}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=OczfR1UhMPg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 How are this particles managed thorugh the system? Do we need to generate a new particle every time? If so, will this affect the overall preformance of the game? Let's see what I have done when implementing this theory.
 
 # My approach
