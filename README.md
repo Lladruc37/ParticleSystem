@@ -1,7 +1,7 @@
 # ParticleSystem
 This is a 2D particle system done with C++
 
-![screenshot](https://github.com/Lladruc37/ParticleSystem/blob/main/screenshots/screenshot.png)
+![screenshot](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/screenshot.png)
 
 # About this project
 
