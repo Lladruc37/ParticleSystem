@@ -67,7 +67,7 @@ William T. Reeves, Researcher at Lucasfilm who worked in one of the first implem
 
 A particle system can be composed of various different kind of emitters that at the same time can also have emitters inside of them. This parent-child relation can go on as far as we want, depending of what we want to simulate it would be very useful. By using this hierearchy there’s a particle system which acts as a parent and contains subsystems that contains other subsystems.
 
-### Emitter
+### **Emitter**
 
 An emitter is the object in charge of spawning all the particles and defining the particles behaviour and properties, very similar to the particle system to the emitter. An emitter is in charge of the following parameters:
 
@@ -99,7 +99,25 @@ Here you have a video I found very interesting of how particles are done in Leag
 How are this particles managed thorugh the system? Do we need to generate a new particle every time? If so, will this affect the overall preformance of the game? Let's see what I have done when implementing this theory.
 
 # My approach
-How I did the particle system
+My particle system will have the following features:
+- It will be 2D (although almost everything explained here can be transfered into 3D if needed).
+- Particles movement will be linear but with the option of interpolate between start and end speed.
+- An atlas full of particle textures will be used to render different types of particles.
+- All data wil be outside the code, written in an xml file.
+- A pool will be used as a container for emitter particles. We will talk about what this means soon, for now everytime we talk about pools just think of a data container like an array of particles.
+- Diferent type of emitters, hence diferent particles will be created through parametrization. This means will only have an emitter and particle class and depending of the data they both recieve the effect will be different.
+- Emitter properties will be covered more in depth later but they will be the next ones:
+  - Angle range of particles’ flow
+  - Rotation speed of particles
+  - Particles’ speed
+  - Particles’ size
+  - Emission rate
+  - Particles’ life
+  - Particles’ texture
+  - Particles’ colors
+  - Particle’s blend mode
+  - Emitter life
+- To create an emitter we will call a function in our scene that will return a pointer to the emitter. With this pointer we can call emitters methods for stoping or starting its emission or simply to destroy it. At the end we want to have something like this:
 
 # TODO's and Solutions
 All TODO's with it's solutions and a bit of explanation
