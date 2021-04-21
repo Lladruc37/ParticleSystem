@@ -41,7 +41,7 @@ I want to keep my program understandable for everyone and generic enough that an
 
 Another important thing that I want to remark is that the way I’m going to explain how to implement the system is definitely not unique and probably not the best. There are lots of ways to do this and there is plenty of professional people that know a lot more that I do. If you want to learn more about how to implement a particle system I encourage you to check the [documentation](#documentation) that helped me doing this.
 
-By the end of the web, if you have been following with the exercises you should get something like this:
+By the end of the web, if you have been following with the exercises you should get something like this and much more:
 
 ![End Result](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
 
