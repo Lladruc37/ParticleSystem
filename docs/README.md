@@ -45,6 +45,8 @@ By the end of the web, if you have been following with the exercises you should 
 
 ![End Result](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
 
+![](http://i.imgur.com/OUkLi.gif)
+
 Let's see what's out there in the internet.
 
 # Market study
