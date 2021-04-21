@@ -15,13 +15,14 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
   - [Particle Parameters](#particle-parameters)
   - [Special Function: Moving fires](#special-function-moving-fires)
   - [Special Function: Vortex](#special-function-vortex)
+  - [Results](#results)
 - [TODO's and Solutions](#todos-and-solutions)
   - [TODO 1: Set up the emitter](#todo-1-set-up-the-emitter)
   - [TODO 2: Particle constructor](#todo-2-particle-constructor)
   - [TODO 3.1: Updating alive particles](#todo-31-updating-alive-particles)
   - [TODO 3.2: Drawing alive particles](#todo-32-drawing-alive-particles)
   - [TODO 4.1: Particle interpolation](#todo-41-particle-interpolation)
-  - [TODO 4.2:Particles deletion](#todo-42-particles-deletion)
+  - [TODO 4.2: Particles deletion](#todo-42-particles-deletion)
   - [TODO 5.1: Color interpolation](#todo-51-color-interpolation)
   - [TODO 5.2: Modify DrawParticle](#todo-52-modify-drawparticle)
   - [TODO 5.3: Debug mode](#todo-53-debug-mode)
@@ -42,22 +43,7 @@ Another important thing that I want to remark is that the way I’m going to exp
 
 By the end of the web, if you have been following with the exercises you should get something like this:
 
-
-
-A particle system is a structure that allows you to simulate particles of different types in an organic way with the advantage of just tweaking some particle properties to get the exact results you want very quickly and without effort. And the best part: you don’t have to draw any of these particles. You just need a base texture and that’s all. The system will be in charge of rendering the particles, the effects (such as glowing), physics calculations, emission rate and so on. You don’t need to worry about anything, just playing around with it to get what you want.
-
-Particle systems are quite important in games in order to add to the visual representation of the whole feel of the game. Particle systems are quite easy to write and are merely a collection of one or more particles. So we need to create a single particle with some properties and then let the particle system decide how many particles it wants.
-
-Particle systems are highly object oriented. First make a class that represents the individual particles, and have these incorporate a lifespan variable that will tell the particle how long it has to live. This way, it will die out after a certain period of time. Next, make a class that acts as an "emitter", who's job is to maintain a collection of the particle class that you've already made. The emitter will initialize new particles, which are generally given an initial velocity and then are affected by forces on the system like gravity or wind. When a particle dies out, a new particle can be emitted from the source in its place.
-
-A particle system contains a bunch of tiny objects called particles that have some kind of movement and a lifetime. These particles are generated and destroyed over time to simulate a flow. Hence, a particle system is the structure in charge of managing the living particles and generate new ones when needed.
-Organic effects are difficult to simulate but what particle systems do is simplify the problem. Like in physics, we divide the effect in tiny and controllable particles that as a whole seems like something bigger that behaves as natural phenomenas. By managing a large group of these particles we can represent natural effects like water, fire or smoke so much easier than if we tried to treat it as a whole thing.
-Nowadays particle systems can be found in any almost any game engine or 3D software. Maya and 3D Max have one as well as Unity or Unreal Engine. Particle are really important in a lot of videogames as it makes huge improvement. Particles makes the enviroment or the the player stands out and it really adds up a lot to the game. Let’s see a few examples.
-
-
-
-
-END RESULT GIF----------------------
+![End Result](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
 
 Let's see what's out there in the internet.
 
@@ -66,15 +52,15 @@ It's quite common to work with sprites and sprite sheets, which for those unfami
 
 Here you have some examples of different sprite sheets:
 
-MEGA MAN IMAGE---------------------
+![Mega Man](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/mega_man.jpg)
 
-SAMUS IMAGE------------------------
+![Samus](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/samus.png)
 
-EXPLOSION IMAGE--------------------
+![Explosion](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/explosion.png)
 
 Even though this particle system is made considering a 2D game, here you have a 3D example:
 
-3D EXPLOSION GIF-------------------
+![3D Explosion](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/3d_explosion.gif)
 
 Let's see what composes a particle system.
 
@@ -106,7 +92,7 @@ As said before particles inherit its properties from the emitter they came from.
 
 This texture can be anything we want that fits our purpose. It’s almost always a balck and white texture that will be colored when rendering. A good example is this set of particle textures I gathered:
 
-PARTICLE ATLAS-----------------
+![Particle Atlas](https://github.com/Lladruc37/ParticleSystem/blob/main/solution/Output/Assets/Textures/ParticlesAtlas.png)
 
 Particle properties along with the emitter can be anything you like. As an example, the Unity engine has a big spectrum when it comes to emitters and particle properties, which of course you can change anything you want thus allowing you to generate almost any type of particle you can think of.
 
@@ -174,7 +160,7 @@ Equally to the particle system module I will not go very much in depth as to the
 ## Particle Class
 This class is actually pretty simple if it is kept basic. It is given a lot of data that will define and diferenciate the various types of particles. To go along with this, there are a few functions to draw, update and prepare for deletion of the particle. A particle in its essence is a moving point in space with a texture. Here you have a diagram of the most basic particle:
 
-PARTICLE IMAGE----------------------------
+![Basic Particle](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/particle.png)
 
 A particle will be a class with a position, a vector velocity and a texture (represented by a rectangle indicating the position and size inside the atlas). In this case I will add a lot more data but that’s something optional depending of what you want to do.
 This particle will have a constructor for setting everything up, an update method to move them and a draw one to render them on screen and that’s it.
@@ -319,6 +305,8 @@ if (movingFire)
 }
 ```
 
+![Moving Fire](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/moving.gif)
+
 ## Special Function: Vortex
 It's actually very simple, just some math involved and the results are great!
 I need the position of the vortex, the speed or power of the vortex and its scale or radius:
@@ -348,13 +336,51 @@ void Particle::CalculateParticlePos(float dt)
 }
 ```
 
+![Vortex1](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/vortex_1.gif)
+![Vortex2](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/vortex_2.gif)
+
 I have also a Set/Get functions but there is nothing really to explain about them so I will just move on to the results.
 
 ---
 
+## Results
 The results I got after some time making the particles are these:
 
-RESULTS GIFS-------------------------------------
+- Fire
+
+![Fire](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
+
+- Smoke
+
+![Smoke](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/smoke.gif)
+
+- Nova
+
+![Nova](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/nova.gif)
+
+- Slash
+
+![Slash](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/slash.gif)
+
+- Bubbles
+
+![Bubbles](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/bubbles.gif)
+
+- Heal
+
+![Heal](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/heal.gif)
+
+- Bless
+
+![Bless](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/bless.gif)
+
+- Stop Vortex
+
+![Stop Vortex](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/stop_vortex.gif)
+
+- Debug
+
+![Debug](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/debug.gif)
 
 # TODO's and Solutions
 ## TODO 1: Set up the emitter
@@ -601,27 +627,27 @@ The particle system works and is very cool! But there is still a lot of room for
 # Documentation
 Links I used either to learn of the topic or I found useful while making this project:
 
-- [https://www.khanacademy.org/computing/pixar/effects/particle/v/effects-overview](https://www.khanacademy.org/computing/pixar/effects/particle/v/effects-overview) --
-- [https://www.youtube.com/watch?v=6Z5FI5180oo](https://www.youtube.com/watch?v=6Z5FI5180oo)
-- [https://github.com/scarsty/SDL2-particles](https://github.com/scarsty/SDL2-particles)
-- [https://www.youtube.com/watch?v=eyo9jRsJBwY](https://www.youtube.com/watch?v=eyo9jRsJBwY) --
-- [https://discourse.libsdl.org/t/2d-lighting-particle-effects/20480](https://discourse.libsdl.org/t/2d-lighting-particle-effects/20480)
-- [https://www.pascalgamedevelopment.com/showthread.php?5863-SDL-amp-2d-particles](https://www.pascalgamedevelopment.com/showthread.php?5863-SDL-amp-2d-particles)
-- [https://www.reddit.com/r/learnprogramming/comments/8up5q9/c_sdl2_particle_system_tutorials/](https://www.reddit.com/r/learnprogramming/comments/8up5q9/c_sdl2_particle_system_tutorials/)
-- [https://gamedev.stackexchange.com/questions/33670/what-features-do-basic-particle-engines-have](https://gamedev.stackexchange.com/questions/33670/what-features-do-basic-particle-engines-have)
-- [http://buildnewgames.com/particle-systems/](http://buildnewgames.com/particle-systems/) --
-- [https://www.bfilipek.com/2014/04/flexible-particle-system-start.html](https://www.bfilipek.com/2014/04/flexible-particle-system-start.html) -
-- [https://subscription.packtpub.com/book/game_development/9781785882722/9/ch09lvl1sec85/creating-a-particle-system](https://subscription.packtpub.com/book/game_development/9781785882722/9/ch09lvl1sec85/creating-a-particle-system)
-- [https://www.youtube.com/watch?v=OczfR1UhMPg](https://www.youtube.com/watch?v=OczfR1UhMPg) --
-- [https://stackoverflow.com/questions/11910181/how-to-implement-direction-in-a-2d-particle-system](https://stackoverflow.com/questions/11910181/how-to-implement-direction-in-a-2d-particle-system) -
-- [https://gamedev.net/forums/topic/380009-where-can-i-find-a-2d-particle-system-tutorial/380009/](https://gamedev.net/forums/topic/380009-where-can-i-find-a-2d-particle-system-tutorial/380009/) --
-- [http://wiki.libsdl.org/CategoryRender?highlight=%28particle%29](http://wiki.libsdl.org/CategoryRender?highlight=%28particle%29)
-- [https://gamedev.net/forums/topic/627017-2d-particle-effects-39where-do-i-begin39/4954379/](https://gamedev.net/forums/topic/627017-2d-particle-effects-39where-do-i-begin39/4954379/) --
-- [https://www.youtube.com/watch?v=f2zZfj8eq_Q&feature=emb_title](https://www.youtube.com/watch?v=f2zZfj8eq_Q&feature=emb_title)
-- [http://gameprogrammingpatterns.com/object-pool.html](http://gameprogrammingpatterns.com/object-pool.html) --
-- [http://gameprogrammingpatterns.com](http://gameprogrammingpatterns.com)
-- [https://gamedevelopment.tutsplus.com/tutorials/adding-turbulence-to-a-particle-system--gamedev-13332](https://gamedevelopment.tutsplus.com/tutorials/adding-turbulence-to-a-particle-system--gamedev-13332) --
-- [https://github.com/nintervik/2D-Particle-System](https://github.com/nintervik/2D-Particle-System) --
-- [https://github.com/nintervik/2D-Particle-System/tree/master/docs](https://github.com/nintervik/2D-Particle-System/tree/master/docs) --
-- [https://nintervik.github.io/2D-Particle-System/](https://nintervik.github.io/2D-Particle-System/) --
-- [https://www.gamasutra.com/blogs/DavidFinseth/20180216/314707/Creating_2D_Particle_Effects_in_Unity3D.php](https://www.gamasutra.com/blogs/DavidFinseth/20180216/314707/Creating_2D_Particle_Effects_in_Unity3D.php) --
+- https://www.khanacademy.org/computing/pixar/effects/particle/v/effects-overview
+- https://www.youtube.com/watch?v=6Z5FI5180oo
+- https://github.com/scarsty/SDL2-particles
+- https://www.youtube.com/watch?v=eyo9jRsJBwY
+- https://discourse.libsdl.org/t/2d-lighting-particle-effects/20480
+- https://www.pascalgamedevelopment.com/showthread.php?5863-SDL-amp-2d-particles
+- https://www.reddit.com/r/learnprogramming/comments/8up5q9/c_sdl2_particle_system_tutorials/
+- https://gamedev.stackexchange.com/questions/33670/what-features-do-basic-particle-engines-have
+- http://buildnewgames.com/particle-systems/
+- https://www.bfilipek.com/2014/04/flexible-particle-system-start.html
+- https://subscription.packtpub.com/book/game_development/9781785882722/9/ch09lvl1sec85/creating-a-particle-system
+- https://www.youtube.com/watch?v=OczfR1UhMPg
+- https://stackoverflow.com/questions/11910181/how-to-implement-direction-in-a-2d-particle-system
+- https://gamedev.net/forums/topic/380009-where-can-i-find-a-2d-particle-system-tutorial/380009/
+- http://wiki.libsdl.org/CategoryRender?highlight=%28particle%29
+- https://gamedev.net/forums/topic/627017-2d-particle-effects-39where-do-i-begin39/4954379/
+- https://www.youtube.com/watch?v=f2zZfj8eq_Q&feature=emb_title
+- http://gameprogrammingpatterns.com/object-pool.html
+- http://gameprogrammingpatterns.com
+- https://gamedevelopment.tutsplus.com/tutorials/adding-turbulence-to-a-particle-system--gamedev-13332
+- https://github.com/nintervik/2D-Particle-System
+- https://github.com/nintervik/2D-Particle-System/tree/master/docs
+- https://nintervik.github.io/2D-Particle-System/
+- https://www.gamasutra.com/blogs/DavidFinseth/20180216/314707/Creating_2D_Particle_Effects_in_Unity3D.php
