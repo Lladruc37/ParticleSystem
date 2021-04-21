@@ -43,9 +43,7 @@ Another important thing that I want to remark is that the way I’m going to exp
 
 By the end of the web, if you have been following with the exercises you should get something like this and much more:
 
-![End Result](https://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
-
-![](http://i.imgur.com/OUkLi.gif)
+![End Result](http://github.com/Lladruc37/ParticleSystem/blob/main/docs/images/fire.gif)
 
 Let's see what's out there in the internet.
 
