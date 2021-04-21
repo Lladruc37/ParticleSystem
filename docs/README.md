@@ -4,6 +4,10 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
 # Index
 - [Introduction](#introduction)
 - [Market study](#market-study)
+ - [Components](##components)
+  - [Particle System](###particle-system)
+  - [Emitter](###emitter)
+  - [Particle](###particle)
 - [My approach](#my-approach)
 - [TODO's and Solutions](#todos-and-solutions)
 - [Possible improvements](#possible-improvements)
@@ -58,7 +62,7 @@ Even though this particle system is made considering a 2D game, here you have a 
 Let's see what composes a particle system.
 
 ## Components
-### Particle system
+### **Particle system**
 
 The particle system in itself contains all emitters created, defines the emitter behaviour and properties and both spawns and despawns emitters if told to do so. It's in charge of managing everything particle related for us so we don't have to touch any of the emitter and particle code to affect these.
 
@@ -79,7 +83,7 @@ An emitter is the object in charge of spawning all the particles and defining th
 
 The emitter itself contains all the particles that will be updated, drawn and eventually die over a period of time. All this data is transfered from the emitter to all this particles so they behave like they are suposed to. Changing this data will change the particles of that emitter too, affecting their behaviour accordingly.
 
-### Particle
+### **Particle**
 
 As said before particles inherit its properties from the emitter they came from. But what is exctly the particle itself? The particle itself it’s just a simple moving texture that is renderered on screen. In 3D enviroments they use something called billboards which is basically an image that always faces the camera. But we don’t need to worry about that as we will focus only in 2D.
 
