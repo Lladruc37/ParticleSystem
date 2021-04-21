@@ -188,8 +188,8 @@ private:
 	SDL_Rect pRect;
 
 	uint life;
-  };
-  ```
+};
+```
   
 Inside the `Update(float dt)` function I will move the particle according to its velocity and using the angle which I will get from the emitter and dt for accurrate speeds.
 It should look something like this:
