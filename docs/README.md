@@ -104,11 +104,11 @@ How are this particles managed thorugh the system? Do we need to generate a new 
 
 # My approach
 My particle system will have the following features:
-- It will be 2D (although almost everything explained here can be transfered into 3D if needed).
-- Particles movement will be linear but with the option of interpolate between start and end speed.
-- An atlas full of particle textures will be used to render different types of particles.
-- All data wil be outside the code, written in an xml file.
-- A pool will be used as a container for emitter particles. We will talk about what this means soon, for now everytime we talk about pools just think of a data container like an array of particles.
+- 2D implementation (although almost everything explained can be easily transfered into 3D if needed).
+- Particles movement will be linear but will have the option to interpolate between the initial speed and final speed.
+- A particle atlas with some particle textures will be used to draw different types of particles on the screen.
+- The data properties will be compacted in a single function called `LoadEmittersData()` found in the Particle System module.
+- A pool/list will be used as a container for the **particle system** containing **emitters** and for each **emitter** containing **particles**.
 - Diferent type of emitters, hence diferent particles will be created through parametrization. This means will only have an emitter and particle class and depending of the data they both recieve the effect will be different.
 - Emitter properties will be covered more in depth later but they will be the next ones:
   - Angle range of particles’ flow
