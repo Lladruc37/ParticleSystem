@@ -128,7 +128,7 @@ My particle system will have the following features:
   - Half texture
 
 To create an emitter we will call a function in the scene that will return a pointer to the emitter created. With this pointer we can call emitter methods for stoping and starting the vortex or destroy itself. The function call should look like this:
-```
+```cpp
 fires.Add(app->particleSystem->AddEmitter(pos, EmitterData::EmitterType::FIRE));
 ```
 
@@ -166,7 +166,7 @@ A particle will be a class with a position, a vector velocity and a texture (rep
 This particle will have a constructor for setting everything up, an update method to move them and a draw one to render them on screen and that’s it.
 
 These are the variables that will be stored inside a particle:
-```
+```cpp
 class Particle
 {
 public:
@@ -193,7 +193,7 @@ private:
   
 Inside the `Update(float dt)` function I will move the particle according to its velocity and using the angle which I will get from the emitter and dt for accurrate speeds.
 It should look something like this:
-```
+```cpp
 curSpeed.x = speed * cos(DEG_2_RAD(angle));
 curSpeed.y = -speed * sin(DEG_2_RAD(angle));
 
@@ -206,11 +206,11 @@ life--;
 
 Now inside the `Draw()` function I will draw the particle in its position. Just as if you wanted to draw a normal texture.
 It should look similarly:
-```
+```cpp
 ret = app->render->DrawParticle(app->particleSystem->GetParticleAtlas(), pos.x, pos.y, &pRect);
 ```
 And:
-```
+```cpp
 bool Render::DrawParticle(SDL_Texture* texture, int x, int y, const SDL_Rect* section, float speed, double angle) const
 {
 	uint scale = app->win->GetScale();
@@ -276,7 +276,7 @@ It's very easy but I thought I would explain it since it's not explained anywher
 I use a simple bool and if it's active all fire emitters are updated to move to the mouse position. If it's turned off all the fires will stay to the last updated position.
 
 The code to do that:
-```
+```cpp
 // All current and future fires will now (toggle) follow/not follow the mouse
 if (app->input->GetKey(SDL_SCANCODE_F8) == KEY_DOWN)
 {
@@ -311,7 +311,7 @@ if (movingFire)
 It's actually very simple, just some math involved and the results are great!
 I need the position of the vortex, the speed or power of the vortex and its scale or radius:
 
-```
+```cpp
 struct Vortex
 {
 public:
@@ -324,7 +324,7 @@ public:
 
 And the actual code that makes the particle be affected by the vortex should look like this:
 
-```
+```cpp
 void Particle::CalculateParticlePos(float dt)
 {
 	fPoint dif = { pos.x - vortex.pos.x, pos.y - vortex.pos.y };
@@ -389,7 +389,7 @@ You will also have to calculate the maximum particles that are able to spawn eac
 Finally, you also need to start a life timer for the actual emitter since you want it to die if the lifetime given is surpassed.
 
 The result should be this:
-```
+```cpp
 this->pos = pos;
 this->data = data;
 
@@ -409,7 +409,7 @@ You will need to change the speed(s) (in both axis) taking into consideration th
 And don't forget the timestep so you can interpolate between the initial state of the particle and the final state of the particle.
 
 The result should be similar to this:
-```
+```cpp
 // Movement properties
 this->pos = pos;
 this->initialSpeed.x = initialSpeed * cos(DEG_2_RAD(angle));
@@ -445,7 +445,7 @@ pendingToDelete = false;
 It's as simple as going through the pool/list of particles and calling the function.
 
 The expected result:
-```
+```cpp
 // Update all alive particles
 ListItem<Particle*>* p = particlePool.start;
 while (p != nullptr)
@@ -462,7 +462,7 @@ while (p != nullptr)
 Very similar to the past TODO, go through the pool/list and call the function.
 
 The resulting code should be like this:
-```
+```cpp
 ListItem<Particle*>* p = particlePool.start;
 while (p != nullptr)
 {
@@ -481,7 +481,7 @@ while (p != nullptr)
 Sounds hard but it's actually pretty easy. You should increase the current rotation of the particle by its rotational speed, increment the timestep and check if the particle's life has surpassed `1.0f`. If so prepare it for deletion.
 
 The code should be similar to this:
-```
+```cpp
 // Calculates the new rotation according to the rotation speed
 curRotSpeed += rotSpeedIncrement;
 
@@ -499,7 +499,7 @@ if (timeStep >= 1.0f)
 Remember where you draw the particles? Now we will also delete the dead particles. Since it's in the `PostUpdate()` it shouldn't bother anyone.
 
 This updated code should look as such:
-```
+```cpp
 ListItem<Particle*>* p = particlePool.start;
 while (p != nullptr)
 {
@@ -522,7 +522,7 @@ while (p != nullptr)
 You have set up the interpolation but not everything is working right away. Now create a function based on the function `InterpolateBetween(float min, float timeStep, float max)` that as time moves the color changes from the initial color to the final color.
 
 The code solution for both the function and the call of such:
-```
+```cpp
 SDL_Color Particle::InterpolateColor(SDL_Color initialColor, float timeStep, SDL_Color finalColor)
 {
 	SDL_Color resultingColor;
@@ -541,7 +541,7 @@ SDL_Color resColor = InterpolateColor(initialColor, timeStep, finalColor);
 Now you have all these parameters but you can't use them for drawing the particle. You should change that.
 
 The resulting function can vary a lot but I did it like this:
-```
+```cpp
 bool Render::DrawParticle(SDL_Texture* texture, int x, int y, const SDL_Rect* section, const SDL_Rect* rectSize, SDL_Color color, SDL_BlendMode blendMode, float speed, double angle, int pivotX, int pivotY) const
 {
 	uint scale = app->win->GetScale();
@@ -596,7 +596,7 @@ bool Render::DrawParticle(SDL_Texture* texture, int x, int y, const SDL_Rect* se
 Now you have a good looking particle we should show each particle's hitbox. Do it by using the `DrawRectangle(const SDL_Rect& rect, SDL_Color color, bool filled, bool useCamera)` function.
 
 Expected result:
-```
+```cpp
 // Debug drawing rect
 if (app->render->debug)
 {
