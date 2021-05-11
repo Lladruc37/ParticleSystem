@@ -29,6 +29,7 @@ This project was created by [Sergi Colomer Ferrer](https://github.com/Lladruc37)
   - [TODO 6: Make fire](#todo-6-make-fire)
   - [TODO 7: Bubbles](#todo-7-bubbles)
 - [Possible improvements](#possible-improvements)
+- [Presentation](#presentation)
 - [Documentation](#documentation)
 
 
@@ -623,6 +624,9 @@ The particle system works and is very cool! But there is still a lot of room for
 - Physics: Of course, I have done a vortex but you can do so many things with this it's mindblowing. Parabolic movement, various types of turbulences and much much more!
 - Collisions: You could easily add collisions to every particle so they collide with eachother to create better and more interesting effects.
 - Half texture: I even started implementing that. So you can move the center of the particles for when in varies in size you don't have to worry of seeing bad results.
+
+# Presentation
+I have uploaded the presentation as a pdf but I would recomend you to watch it through this link (as you will be able to see the gif and videos): https://docs.google.com/presentation/d/14kO9I-AsZtHQ92iOQrePFH6TULYpl-BDQAuydFAJnKw/edit?usp=sharing
 
 # Documentation
 Links I used either to learn of the topic or I found useful while making this project:
